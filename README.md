@@ -1,4 +1,4 @@
-# What did i earn
+# What did i learn
 
 <p>Quarto projeto desenvolvido na Dev Venture | 2° Edição.</p>
 
