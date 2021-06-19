@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity() {
 
         val recycler = binding.learnedItensRecyclerView
         val adapter = LearnedItemAdapter()
-        adapter.learnedItens = LearnedItemDatabase().getAll()
-        recycler.adapter
+        val learnedItens = LearnedItemDatabase().getAll()
+
+        adapter.learnedItens = learnedItens
+        recycler.adapter = adapter
     }
 }

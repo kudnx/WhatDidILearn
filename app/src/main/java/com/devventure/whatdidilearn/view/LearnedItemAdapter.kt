@@ -4,13 +4,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.annotation.ColorRes
 import androidx.recyclerview.widget.RecyclerView
 import com.devventure.whatdidilearn.R
 import com.devventure.whatdidilearn.data.LearnedItem
+import com.devventure.whatdidilearn.data.UnderstandingLevel
 
 class LearnedItemAdapter: RecyclerView.Adapter<LearnedItemAdapter.LearnedItemViewHolder>() {
     var learnedItens = listOf<LearnedItem>()
+        set(value){
+            field = value
+            notifyDataSetChanged()
+        }
 
     inner class LearnedItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         private val titleContainer : TextView = itemView.findViewById(R.id.itemTitle)
@@ -21,10 +25,10 @@ class LearnedItemAdapter: RecyclerView.Adapter<LearnedItemAdapter.LearnedItemVie
             titleContainer.text = learnedItem.name
             descriptionContainer.text = learnedItem.description
 
-            when(learnedItem.understandingLevel.toString()) {
-                "LOW"     -> colorContainer.setBackgroundResource(R.color.red)
-                "MEDIUM"  -> colorContainer.setBackgroundResource(R.color.yellow)
-                "HIGH"    -> colorContainer.setBackgroundResource(R.color.green)
+            when(learnedItem.understandingLevel) {
+                UnderstandingLevel.LOW  -> colorContainer.setBackgroundResource(R.color.red)
+                UnderstandingLevel.MEDIUM  -> colorContainer.setBackgroundResource(R.color.yellow)
+                UnderstandingLevel.HIGH  -> colorContainer.setBackgroundResource(R.color.green)
             }
         }
     }
