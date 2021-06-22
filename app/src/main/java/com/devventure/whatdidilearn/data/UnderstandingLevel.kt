@@ -1,7 +1,9 @@
 package com.devventure.whatdidilearn.data
 
-enum class UnderstandingLevel {
-    LOW,
-    MEDIUM,
-    HIGH
+import com.devventure.whatdidilearn.R
+
+enum class UnderstandingLevel(val color : Int) {
+    LOW(R.color.red),
+    MEDIUM(R.color.yellow),
+    HIGH(R.color.green)
 }
