@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/default_padding"
     tools:context=".learned_item_register">
 
     <EditText
@@ -36,6 +37,7 @@
 
     <RadioGroup
         android:layout_width="149dp"
+        android:id="@+id/radio"
         android:layout_height="144dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toStartOf="@+id/btn_save"
@@ -66,11 +68,12 @@
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="148dp"
-        android:text="@string/btn_save"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="28dp"
         android:backgroundTint="@color/darker_green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:onClick="saveItem"
+        android:text="@string/btn_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

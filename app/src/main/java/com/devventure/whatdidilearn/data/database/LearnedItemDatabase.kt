@@ -1,8 +1,10 @@
-package com.devventure.whatdidilearn.data
+package com.devventure.whatdidilearn.data.database
 
 import android.content.Context
 import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.devventure.whatdidilearn.entities.LearnedItem
+import com.devventure.whatdidilearn.entities.UnderstandingLevel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 

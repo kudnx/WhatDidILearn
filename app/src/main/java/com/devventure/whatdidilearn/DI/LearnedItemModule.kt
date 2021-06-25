@@ -2,7 +2,9 @@ package com.devventure.whatdidilearn.DI
 
 import com.devventure.whatdidilearn.data.LearnedItemRepository
 import com.devventure.whatdidilearn.data.database.LearnedItemDatabase
+import com.devventure.whatdidilearn.entities.LearnedItem
 import com.devventure.whatdidilearn.viewmodel.MainViewModel
+import com.devventure.whatdidilearn.viewmodel.SecondaryViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -11,7 +13,7 @@ import org.koin.dsl.module
 object LearnedItemModule {
     val module = module{
         factory {
-            CoroutineScope(Dispatchers.IO)
+            CoroutineScope(context = Dispatchers.IO)
         }
         single {
             LearnedItemDatabase.getDatabase(context = get(), scope = get())
@@ -20,8 +22,9 @@ object LearnedItemModule {
             get<LearnedItemDatabase>().learnedItemDao()
         }
         factory {
-            LearnedItemRepository(get())
+            LearnedItemRepository(dao = get())
         }
-        viewModel { MainViewModel(get()) }
+        viewModel { MainViewModel(repository = get()) }
+        viewModel { SecondaryViewModel(repository = get())}
     }
 }

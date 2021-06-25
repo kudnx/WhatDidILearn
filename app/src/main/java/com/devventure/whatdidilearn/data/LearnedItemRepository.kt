@@ -10,6 +10,4 @@ class LearnedItemRepository (private val dao: LearnedItemDAO){
     fun addNewItem(item: LearnedItem) {
         dao.insert(item)
     }
-
-
 }

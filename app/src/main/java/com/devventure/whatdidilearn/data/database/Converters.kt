@@ -1,7 +1,7 @@
-package com.devventure.whatdidilearn.data
+package com.devventure.whatdidilearn.data.database
 
 import androidx.room.TypeConverter
-import com.devventure.whatdidilearn.R
+import com.devventure.whatdidilearn.entities.UnderstandingLevel
 
 class Converters {
     @TypeConverter
