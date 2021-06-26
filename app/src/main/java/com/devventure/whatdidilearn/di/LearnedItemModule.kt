@@ -1,8 +1,7 @@
-package com.devventure.whatdidilearn.DI
+package com.devventure.whatdidilearn.di
 
 import com.devventure.whatdidilearn.data.LearnedItemRepository
 import com.devventure.whatdidilearn.data.database.LearnedItemDatabase
-import com.devventure.whatdidilearn.entities.LearnedItem
 import com.devventure.whatdidilearn.viewmodel.MainViewModel
 import com.devventure.whatdidilearn.viewmodel.SecondaryViewModel
 import kotlinx.coroutines.CoroutineScope

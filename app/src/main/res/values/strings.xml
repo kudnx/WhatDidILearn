@@ -15,4 +15,5 @@
     <string name="item_learned_low">Ruim</string>
     <string name="item_learned_medium">Médio</string>
     <string name="item_learned_high">Bom</string>
+    <string name="validatefields">Por Favor, Preencha todos os campos!</string>
 </resources>

@@ -1,11 +1,7 @@
 package com.devventure.whatdidilearn
 
 import android.app.Application
-import com.devventure.whatdidilearn.DI.LearnedItemModule
-import com.devventure.whatdidilearn.data.LearnedItemRepository
-import com.devventure.whatdidilearn.data.database.LearnedItemDatabase
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import com.devventure.whatdidilearn.di.LearnedItemModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
